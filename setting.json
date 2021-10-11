@@ -1,8 +1,8 @@
 {
-  "name-web":"All Games News",
+  "name-web":"Celeb Info",
   "author":"Admin",
   "remove-comment-html":true,
-  "target":"https://gamersworld24.com",
+  "target":"https://celebanswers.com",
   "name-folder-sitemap":"sitemap",
   "element-remove":[
     "script",
@@ -20,14 +20,14 @@
   ],
   "costom-element-remove":[
     {
-      "target":"stackoverflow.com",
+      "target":"celebanswers.com",
       "element-remove-selector":[
         ".js-dismissable-hero",
         ".lazy-loading"
       ],
       "replace-string":[
         {
-          "target":"https://stackoverflow.com",
+          "target":"https://celebanswers.com",
           "replace":"${nameWeb}"
         }
       ]
