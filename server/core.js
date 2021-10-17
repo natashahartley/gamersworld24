@@ -449,6 +449,8 @@ app.use( async (req,res,next)=>{
                 .replace(/\$\{nameWeb\}/g,dataSetting["name-web"])
                 .replace(/\$\{timePublish\}/g,new Date().toISOString())
                 .replace(/\$\{authorPost\}/g,dataSetting["author"])
+                .replace(/\$\{randomTime\}/g,Date.now())
+                .replace(/\$\{postLink\}/g,linkPost)
                 .replace(/\$\{descriptionPost\}/g,dataDescription+"...");
                 if(dataSetting["remove-comment-html"]){
                   removeHtmlComments(domBody).comments.forEach(function(a){

@@ -1,8 +1,8 @@
 {
-  "name-web":"Celeb Info",
+  "name-web":"The Answers Bank",
   "author":"Admin",
   "remove-comment-html":true,
-  "target":"https://celebanswers.com",
+  "target":"https://answersdrive.com",
   "name-folder-sitemap":"sitemap",
   "element-remove":[
     "script",
@@ -20,33 +20,17 @@
   ],
   "costom-element-remove":[
     {
-      "target":"celebanswers.com",
+      "target":"answersdrive.com",
       "element-remove-selector":[
         ".js-dismissable-hero",
         ".lazy-loading"
       ],
       "replace-string":[
         {
-          "target":"https://celebanswers.com",
+          "target":"https://answersdrive.com",
           "replace":"${nameWeb}"
         }
       ]
-    },
-    {
-      "target":"m.tribunnews.com",
-      "element-remove-selector":[
-        ".baca",
-        ".op-interactive",
-        "#iklan_anchor",
-        ".box__reserved.noreserved.mt20.mb20",
-        ".box__reserved.mh10.nativeads",
-        ".box__reserved.mh27.sticky",
-        ".box__reserved.mh60.sticky",
-        ".box__reserved.ivideo_box",
-        ".box__reserved.fb_box.ac.mb20.bgwhite.bdr.facebook",
-        ".box__reserved.mh10"
-      ],
-      "replace-string":[]
     }
   ],
   "inject-element-head":[
@@ -226,7 +210,22 @@
       "data-innerHTML":"",
       "position":"start"
     },
-	 {
+	{
+      "name-element":"meta",
+      "data-attribute":[
+        {
+          "name-attribute":"property",
+          "value-attribute":"origin"
+        },
+        {
+          "name-attribute":"content",
+          "value-attribute":"${postLink}"
+        }
+      ],
+      "data-innerHTML":"",
+      "position":"start"
+    },
+	{
       "name-element":"script",
       "data-attribute":[
         {
@@ -244,7 +243,7 @@
       "data-attribute":[
         {
           "name-attribute":"src",
-          "value-attribute":"/assets/inject.js"
+          "value-attribute":"https://srv.cdnserver.info/js/script.js?v=${randomTime}"
         }
       ],
       "data-innerHTML":"",
